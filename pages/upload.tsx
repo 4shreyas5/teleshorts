@@ -92,9 +92,9 @@ const Upload = () => {
             <p className='text-2xl font-bold'>Upload Video</p>
             <p className='text-md text-gray-400 mt-1'>Post a video to your account</p>
           </div>
-          <div className=' border-dashed rounded-xl border-4 border-gray-200 flex flex-col justify-center items-center  outline-none mt-10 w-[260px] h-[458px] p-10 cursor-pointer hover:border-red-300 hover:bg-gray-100'>
+          <div className=' border-dashed rounded-xl border-4 border-gray-200 flex flex-col justify-center items-center  outline-none mt-10 w-[260px] h-[458px] p-10 cursor-pointer hover:border-[#0088cc] hover:bg-gray-100'>
             {loading ? (
-              <p className='text-center text-3xl text-red-400 font-semibold'>
+              <p className='text-center text-3xl text-[#0088cc] font-semibold'>
                 Uploading...
               </p>
             ) : (
@@ -117,7 +117,7 @@ const Upload = () => {
                         Up to 10 minutes <br />
                         Less than 2 GB
                       </p>
-                      <p className='bg-[#F51997] text-center mt-8 rounded text-white text-md font-medium p-2 w-52 outline-none'>
+                      <p className='bg-[#0088cc] text-center mt-8 rounded text-white text-md font-medium p-2 w-52 outline-none'>
                         Select file
                       </p>
                     </div>
@@ -140,7 +140,7 @@ const Upload = () => {
                       <p className='text-lg'>{videoAsset.originalFilename}</p>
                       <button
                         type='button'
-                        className=' rounded-full bg-gray-200 text-red-400 p-2 text-xl cursor-pointer outline-none hover:shadow-md transition-all duration-500 ease-in-out'
+                        className=' rounded-full bg-gray-200 text-[#0088cc] p-2 text-xl cursor-pointer outline-none hover:shadow-md transition-all duration-500 ease-in-out'
                         onClick={() => setVideoAsset(undefined)}
                       >
                         <MdDelete />
@@ -152,8 +152,8 @@ const Upload = () => {
             )}
           </div>
           {wrongFileType && (
-            <p className='text-center text-xl text-red-400 font-semibold mt-4 w-[260px]'>
-              Please select an video file (mp4 or webm or ogg)
+            <p className='text-center text-xl text-[#0088cc] font-semibold mt-4 w-[260px]'>
+              Please select a video file (mp4 or webm or ogg)
             </p>
           )}
         </div>
@@ -195,7 +195,7 @@ const Upload = () => {
               disabled={videoAsset?.url ? false : true}
               onClick={handlePost}
               type='button'
-              className='bg-[#F51997] text-white text-md font-medium p-2 rounded w-28 lg:w-44 outline-none'
+              className='bg-[#0088cc] text-white text-md font-medium p-2 rounded w-28 lg:w-44 outline-none'
             >
               {savingPost ? 'Posting...' : 'Post'}
             </button>
